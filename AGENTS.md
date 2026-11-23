@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Roles live in `public.user_roles` (tutor/student); the first signup becomes tutor via the `handle_new_user` trigger — single-tutor platform.
+- Panel data is read client-side with RLS (`src/routes/panel.tsx`); students may only edit submission fields of homework (DB trigger guard).
